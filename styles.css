@@ -1,0 +1,237 @@
+/* --- Kaitlyn Murray --- */
+/* ----- CSS Reset Code----- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ----- CSS Variables ----- */
+:root{
+	/* --- Colors --- */
+	--cerulean: #35748C;
+	--erie-black: #1C2426;
+	--hunter-green: #3F6450;
+	--ecru: #A69C69;
+	--eggshell: #EAE7D6;
+	--l-orange: #F0CDA8;
+	--old-rose: #D05E6B;
+
+	/* --- Fonts --- */
+	--h-fonts: "wayfinder-cf", Garamond, serif;
+	--b-fonts: "fields", Arial, sans-serif;
+}
+
+/* ----- Core Style ----- */
+body{
+	background: url(images/background.png);
+	font-family: var(--b-fonts);
+	font-size: 1.1rem;
+	line-height: 1.5;
+	color: var(--eggshell);
+}
+
+header, main, footer{
+	padding: 2rem;
+	width: 1376px;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+main{
+	background-color: var(--erie-black);
+}
+
+h1, h2, h3{
+	font-family: var(--h-fonts);
+	text-align: center;
+}
+
+h2{
+	font-size: 4rem;
+	color: var(--l-orange);
+}
+
+h3{
+	font-size: 2rem;
+	color: var(--l-orange);
+	padding: 1rem
+}
+
+/* ----- Header ----- */
+header{
+	background: url(images/swiss-valley.jpg) center;
+	background-size: cover;
+	height: 560px; 
+	text-align: center;
+}
+
+h1{
+	font-size: 8rem;
+	color: var(--erie-black);
+	font-weight: bold;
+	text-shadow: 1px 1px 3px var(--erie-black);
+}
+
+nav ul{
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+}
+
+nav a{
+	text-decoration: none;
+	font-size: 2rem;
+	background-color: var(--hunter-green);
+	padding: 1rem 2rem;
+	border-radius: 3px;
+	color: var(--eggshell);
+	box-shadow: 2px 2px 5px var(--erie-black);
+	transition: background-color .5s;
+}
+
+.active{
+	background-color: var(--erie-black);
+	color: var(--ecru);
+}
+
+nav a:hover{
+	background-color: var(--old-rose);
+	color: var(--eggshell);
+	transition: background-color .5s;
+}
+
+/* ----- Intro Sections ----- */
+#intro{
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+}
+
+#intro p{
+	max-width: 60ch;
+	padding: 1rem;
+}
+
+/* ----- Home Page Features Section ----- */
+#features{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+}
+
+#features section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem;
+}
+
+/* ----- Contact Page Form Section ----- */
+.required{
+	color: var(--old-rose);
+}
+
+form{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 2rem;
+	row-gap: 1rem;
+	margin: 2rem 21rem;
+}
+
+form section{
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	max-width: 336px;
+}
+
+input, textarea{
+	border: 3px solid var(--cerulean);
+	border-radius: 3px;
+}
+
+input{
+	height: 2rem;
+}
+
+fieldset{
+	display: flex;
+	gap: 1.1rem;
+	align-items: center;
+	padding: 0.2rem 0.2rem 0.5rem 1rem;
+	border: 3px solid var(--cerulean);
+	border-radius: 3px;
+}
+
+textarea{
+	height: 7rem;
+}
+
+#user-submit{
+	grid-column: 2/3;
+	width: 120px;
+	font-size: 1.1rem;
+	background-color: var(--cerulean);
+	padding: 1rem 1rem 2.5rem;
+	margin: 0 auto;
+	border-radius: 3px;
+	color: var(--eggshell);
+	transition: background-color .5s;
+}
+
+#user-submit:hover{
+	background-color: var(--old-rose);
+	color: var(--eggshell);
+	transition: background-color .5s;
+}
+
+/* ----- Footer ----- */
+footer{
+	background-color: var(--hunter-green);
+	text-align: center;
+}
