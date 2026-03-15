@@ -1,0 +1,1 @@
+For this project we were given the content needed for the website along with two basic layouts to choose from for both the home page and contact page. From there, we were to write up the HTML and come up with all the CSS styling fitting for that of a resort.
